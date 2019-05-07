@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './styles.scss';
 
 const genreArr = ['Fantasy', 'Sci-Fi', 'Historical', 'Cyber']
-const typeArr = ['Racing', 'Platformer', 'FPS']
+const typeArr = ['Racing', 'Platformer', 'FPS', 'RTS', 'Card-Based', 'Sport', 'Strategy', 'Puzzle', 'RPG']
 const wildArr = ['Silly', 'Drama']
 
 class App extends React.Component {
@@ -17,14 +17,16 @@ class App extends React.Component {
         this.shuffleHandler = this.shuffleHandler.bind(this);
     }
     shuffleHandler() {
-        let gIndex = Math.floor(Math.random() * Math.floor(genreArr.length))
-        let tIndex = Math.floor(Math.random() * Math.floor(typeArr.length))
-        let wIndex = Math.floor(Math.random() * Math.floor(wildArr.length))
-        this.setState({
-            genre: genreArr[gIndex],
-            type: typeArr[tIndex],
-            wild: wildArr[wIndex]
-        })
+        for (let i = 0; i < 13; i++) {
+            let gIndex = Math.floor(Math.random() * Math.floor(genreArr.length))
+            let tIndex = Math.floor(Math.random() * Math.floor(typeArr.length))
+            let wIndex = Math.floor(Math.random() * Math.floor(wildArr.length))
+            this.setState({
+                genre: genreArr[gIndex],
+                type: typeArr[tIndex],
+                wild: wildArr[wIndex]
+            })
+        }
     }
 
     render() {

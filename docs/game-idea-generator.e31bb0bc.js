@@ -25850,7 +25850,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var genreArr = ['Fantasy', 'Sci-Fi', 'Historical', 'Cyber'];
-var typeArr = ['Racing', 'Platformer', 'FPS'];
+var typeArr = ['Racing', 'Platformer', 'FPS', 'RTS', 'Card-Based', 'Sport', 'Strategy', 'Puzzle', 'RPG'];
 var wildArr = ['Silly', 'Drama'];
 
 var App =
@@ -25876,14 +25876,16 @@ function (_React$Component) {
   _createClass(App, [{
     key: "shuffleHandler",
     value: function shuffleHandler() {
-      var gIndex = Math.floor(Math.random() * Math.floor(genreArr.length));
-      var tIndex = Math.floor(Math.random() * Math.floor(typeArr.length));
-      var wIndex = Math.floor(Math.random() * Math.floor(wildArr.length));
-      this.setState({
-        genre: genreArr[gIndex],
-        type: typeArr[tIndex],
-        wild: wildArr[wIndex]
-      });
+      for (var i = 0; i < 13; i++) {
+        var gIndex = Math.floor(Math.random() * Math.floor(genreArr.length));
+        var tIndex = Math.floor(Math.random() * Math.floor(typeArr.length));
+        var wIndex = Math.floor(Math.random() * Math.floor(wildArr.length));
+        this.setState({
+          genre: genreArr[gIndex],
+          type: typeArr[tIndex],
+          wild: wildArr[wIndex]
+        });
+      }
     }
   }, {
     key: "render",
@@ -25933,7 +25935,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63945" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54779" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

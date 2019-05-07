@@ -1,2 +1,91 @@
+body {
+  font-family: "Gugi", cursive;
+  font-size: 5vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(326deg, #2976a6, #3698bf, #114c59, #41bdd9, #50e2f2);
+  background-size: 1000% 1000%;
+  -webkit-animation: gradientScroll 21s ease infinite;
+  animation: gradientScroll 21s ease infinite;
+}
+@-webkit-keyframes gradientScroll {
+  0% {
+    background-position: 17% 0%;
+  }
+  50% {
+    background-position: 84% 100%;
+  }
+  100% {
+    background-position: 17% 0%;
+  }
+}
+@keyframes gradientScroll {
+  0% {
+    background-position: 17% 0%;
+  }
+  50% {
+    background-position: 84% 100%;
+  }
+  100% {
+    background-position: 17% 0%;
+  }
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#idea {
+  text-align: center;
+  height: 3em;
+}
+
+button {
+  font-family: "Gugi", cursive;
+  border: 2px solid black;
+  box-shadow: 0 5px 5px grey;
+  border-radius: 5px;
+  height: auto;
+  width: autp;
+  font-size: 2.5vmax;
+  background: linear-gradient(145deg, #2976a6, #3698bf, #114c59, #41bdd9, #50e2f2);
+  background-size: 1000% 1000%;
+  -webkit-animation: gradientScroll 21s ease infinite;
+  animation: gradientScroll 21s ease infinite;
+}
+@-webkit-keyframes gradientScroll {
+  0% {
+    background-position: 9% 0%;
+  }
+  50% {
+    background-position: 92% 100%;
+  }
+  100% {
+    background-position: 9% 0%;
+  }
+}
+@keyframes gradientScroll {
+  0% {
+    background-position: 9% 0%;
+  }
+  50% {
+    background-position: 92% 100%;
+  }
+  100% {
+    background-position: 9% 0%;
+  }
+}
+
+button:active {
+  box-shadow: 0px 0px 0px grey;
+}
+
+button:focus {
+  outline: none;
+}
 
 /*# sourceMappingURL=/game-idea-generator.e31bb0bc.css.map */
