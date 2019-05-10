@@ -1,3 +1,3 @@
 # game-idea-generator
 
-A game idea generator for game jams
+A game idea generator for game jams.
