@@ -42,12 +42,13 @@ body {
 #idea {
   text-align: center;
   height: 3em;
+  text-shadow: 0 5px 5px rgba(41, 41, 41, 0.25);
 }
 
 button {
   font-family: "Gugi", cursive;
   border: 2px solid black;
-  box-shadow: 0 5px 5px grey;
+  box-shadow: 0 5px 5px rgba(41, 41, 41, 0.25);
   border-radius: 5px;
   height: auto;
   width: autp;

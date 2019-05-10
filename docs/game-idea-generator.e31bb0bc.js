@@ -25849,9 +25849,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var genreArr = ['Fantasy', 'Sci-Fi', 'Historical', 'Cyber'];
-var typeArr = ['Racing', 'Platformer', 'FPS', 'RTS', 'Card-Based', 'Sport', 'Strategy', 'Puzzle', 'RPG'];
-var wildArr = ['Silly', 'Drama'];
+var settingArr = ['Fantasy', 'Sci-fi', 'Historical', 'Cyber', 'Space', 'Pirate', 'Western', 'Future', 'Medieval', 'Post-Apocalyptic', 'Magic Realism', 'Prehistoric'];
+var typeArr = ['Racing', 'Platformer', 'RTS', 'FPS', 'Card-Based', 'Sport', 'Puzzle', 'RPG', 'Stealth', 'Fighting', 'Rhythm', 'Management Sim', 'Idle ', 'Mystery', 'Base Builder', 'Dating Sim'];
+var wildArr = ['Silly', 'Dramatic', 'Noir', 'Cliches', 'Parody', 'Adult', 'Not Enough Swords', 'Mechs', 'Typing', 'Point and Click', 'Cooking', 'Medical', 'Stereotypical Culture', 'Story Driven', 'Farming', 'Pointless Game Mechanic', 'Fishing', 'Gratuitous Violence', 'Collectables', 'Crafting', 'Free Space', 'Unreliable Narrator', 'Grappling Hook', 'Too Many Stats', 'Grinding', 'Alchemy', 'Heist', 'Cerebral', 'Seafaring'];
 
 var App =
 /*#__PURE__*/
@@ -25865,7 +25865,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
-      genre: '???',
+      setting: '???',
       type: '???',
       wild: '???'
     };
@@ -25877,11 +25877,11 @@ function (_React$Component) {
     key: "shuffleHandler",
     value: function shuffleHandler() {
       for (var i = 0; i < 13; i++) {
-        var gIndex = Math.floor(Math.random() * Math.floor(genreArr.length));
+        var sIndex = Math.floor(Math.random() * Math.floor(settingArr.length));
         var tIndex = Math.floor(Math.random() * Math.floor(typeArr.length));
         var wIndex = Math.floor(Math.random() * Math.floor(wildArr.length));
         this.setState({
-          genre: genreArr[gIndex],
+          setting: settingArr[sIndex],
           type: typeArr[tIndex],
           wild: wildArr[wIndex]
         });
@@ -25894,7 +25894,7 @@ function (_React$Component) {
         id: "wrapper"
       }, _react.default.createElement("div", {
         id: "idea"
-      }, this.state.genre, " ", this.state.type, " ", this.state.wild), _react.default.createElement("button", {
+      }, this.state.setting, " ~ ", this.state.type, " ~ ", this.state.wild), _react.default.createElement("button", {
         id: "randomizer",
         onClick: this.shuffleHandler
       }, "Randomize!"));
@@ -25935,7 +25935,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54779" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52075" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
